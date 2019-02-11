@@ -1,0 +1,31 @@
+class Point{
+  public static void main(String [] args)
+  {
+      java.util.Scanner kb = new java.util.Scanner(System.in);
+        System.out.print("Enter the x1:");
+        int x1 = Integer.parseInt(kb.nextLine());
+        
+        System.out.print("Enter the y1:");
+        int y1 = Integer.parseInt(kb.nextLine());
+        
+        System.out.print("Enter the x2:");
+        int x2 = Integer.parseInt(kb.nextLine());
+        
+        System.out.print("Enter the y2:");
+        int y2 = Integer.parseInt(kb.nextLine());
+        
+        double distance = Number.distance(x1, y1, x2, y2);
+        
+        Number.display(x1, y1, x2, y2, distance);
+  }
+}
+class Number{
+  public static double distance(int x1, int y1, int x2, int y2)
+  {
+      return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+  }
+  public static void display(int x1, int y1, int x2, int y2, double distance)
+  {
+      System.out.printf("distance[(%d, %d), (%d, %d)] = %f%n", x1, y1, x2, y2, distance);
+  }
+}  
