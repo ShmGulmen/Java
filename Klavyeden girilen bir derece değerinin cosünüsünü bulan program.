@@ -2,7 +2,7 @@ class Degree{
   public static void main(String [] args)
   {
       java.util.Scanner kb = new java.util.Scanner(System.in);
-		  System.out.println("Derece bilgisini giriniz");
+		  System.out.println("DEnter the degree");
 		  double val = Double.parseDouble(kb.nextLine());
 		
 		  double result = Math.cos(Math.toRadians(val));
