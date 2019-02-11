@@ -1,0 +1,29 @@
+class App {
+	public static void main(String [] args)
+	{		
+		java.util.Scanner kb = new java.util.Scanner(System.in);
+		System.out.println("Enter the second:");
+		long sec = Long.parseLong(kb.nextLine());
+
+		Util.displayDuration(sec);
+		
+	}
+}	
+class Util {
+	public static void displayDuration(long sec)
+	{		
+		long min,hour;
+		
+		min = sec / 60;
+		sec = sec % 60;
+		hour = min / 60;
+		min = min % 60;
+		
+		if (sec == 0)
+			System.out.printf("%d:%d" , hour,min);
+		else if (hour == 0)
+			System.out.printf("%d:%d" , min,sec);
+		else
+			System.out.printf("%d:%d:%d" , hour,min,sec);
+	}
+}
