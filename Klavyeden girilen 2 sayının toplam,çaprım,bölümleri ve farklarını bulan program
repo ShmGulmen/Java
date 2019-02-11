@@ -1,0 +1,27 @@
+class Number{
+  public static void main(String [] args)
+  {
+      java.util.Scanner kb = new java.util.Scanner(System.in);
+      System.out.println("Enter the first number");
+      double a = Double.parseDouble(kb.nextLine());
+      
+      System.out.println("Enter the second number");
+      double b = Double.parseDouble(kb.nextLine());
+      
+      double result = a + b;
+        
+        System.out.println(result);
+        
+        result = a - b;
+        
+        System.out.println(result);
+        
+        result = a * b;
+        
+        System.out.println(result);
+        
+        result = a / b;
+        
+        System.out.println(result);   
+  }
+}
