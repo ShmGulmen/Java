@@ -1,0 +1,25 @@
+class App {
+	public static void main(String [] args)
+	{		
+		java.util.Scanner kb = new java.util.Scanner(System.in);
+		System.out.print("Sayı: ");
+		int val = Integer.parseInt(kb.nextLine());
+		NumberUtil.isPrime(val);
+	}
+}	
+class NumberUtil {
+	public static boolean isPrime (int val)
+	{
+		if (val <= 1)
+			return false;
+		int halfVal = val;
+		
+		for (int i = 2; i < halfVal;  ++i ) 
+			if (val % i == 0) {
+				System.out.printf("%d%n", i);
+				val /= i;
+				i--;
+		}	
+		return true;
+	}
+}	
