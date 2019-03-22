@@ -1,0 +1,55 @@
+class App {
+	public static void main(String [] args)
+	{
+		Accessor a = new Accessor();
+		
+		a.run();		
+	}
+}
+
+class Accessor {
+	public String Username, Password;
+	
+	public Accessor()
+	{
+		Username = "nestle";
+		Password = "987321";
+	}
+	
+	public void doWorkForSuccess()
+	{
+		System.out.println("Access granted");
+	}
+	
+	public void doWorkForFail()
+	{
+		System.out.println("Access denied");
+	}
+	
+	public void run()
+	{
+		int tryNum = 3;
+		java.util.Scanner kb = new java.util.Scanner(System.in);
+		
+		int i = 0;
+		
+		for (; i < tryNum; ++i) {
+			System.out.println("Username?");
+			String user = kb.nextLine().trim();
+			
+			System.out.println("Password?");
+			String pass = kb.nextLine();
+			
+			if (username.equals(Username) && password.equals(Password))
+				break;	
+			
+			System.out.printf("Remaining enter count=%d%n", tryNum - i - 1);
+		}
+    
+		if (i != tryNum)
+			doWorkForSuccess();
+		else
+			doWorkForFail();	
+		
+	}
+}
