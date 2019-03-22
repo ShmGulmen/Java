@@ -1,0 +1,51 @@
+class App{
+	public static void main(String [] args)
+	{
+		java.util.Scanner kb = new java.util.Scanner(System.in)
+		System.out.println("Day?")
+		int day = Integer.parseInt(kb.nextLine());
+		
+		System.out.println("Month?")
+		int mon = Integer.parseInt(kb.nextLine());
+		
+		System.out.println("Year?")
+		int year = Integer.parseInt(kb.nextLine());
+		
+		int dayOfYear = Date.getDayOfYear(day, mon, year);
+		
+		if (Date.isValidDate(day, mon, year)
+			System.out.printf("%02d/%02d/%04d is a valid date", day, mon,year); 
+		else
+			System.out.println("Invalid Date");
+	}
+class Date{
+	public static boolean isValidDate(int day, int mon, int year)
+	{
+		if (day < 1 || day > 31 || mon < 1 || mon > 12)
+				return false;
+			
+			int days = 31;
+				switch(mon){
+					case 4:
+					case 6:
+					case 9:
+					case 11:
+							days = 30;
+							break;
+					case 2:
+							days = 28;
+							if(isLeapYear(year))
+									++days;
+					}
+				return day <= days;
+		}
+	public static boolean isLeapYear(int year)//Yılın geçerli olup olmadığını kontrol eden metod
+	{
+		return year %4 == 0 && year % 100 != 0 || year % 400 == 0;
+	}
+}	
+							
+							
+							
+							
+				
